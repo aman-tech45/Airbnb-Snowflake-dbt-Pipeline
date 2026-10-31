@@ -1,9 +1,9 @@
-# Credentials and sensitive configuration
-profiles.yml
-.user.yml
-.env
-.env.*
-!.env.example
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
 
 # dbt generated files
 target/
@@ -11,10 +11,14 @@ dbt_packages/
 logs/
 
 # Python
-.venv/
-venv/
 __pycache__/
 *.pyc
+.venv/
+venv/
 
-# Mac
-.DS_Store
+# Sensitive credentials
+.env
+.env.*
+!.env.example
+profiles.yml
+.user.yml
