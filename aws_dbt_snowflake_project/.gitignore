@@ -1,24 +1,58 @@
-# macOS
-.DS_Store
-
-# IDE
-.vscode/
-.idea/
-
-# dbt generated files
-target/
-dbt_packages/
-logs/
-
-# Python
+# ==========================================
+# Python-generated files
+# ==========================================
 __pycache__/
-*.pyc
+*.py[cod]
+build/
+dist/
+wheels/
+*.egg-info/
+
+# ==========================================
+# Virtual environments
+# ==========================================
 .venv/
 venv/
+env/
 
-# Sensitive credentials
+# ==========================================
+# dbt generated files
+# ==========================================
+logs/
+target/
+dbt_packages/
+
+# ==========================================
+# Sensitive credentials and configurations
+# ==========================================
+**/profiles.yml
+**/.user.yml
 .env
 .env.*
 !.env.example
-profiles.yml
-.user.yml
+
+# AWS credentials
+.aws/
+credentials
+*.pem
+*.key
+
+# ==========================================
+# IDE and editor configurations
+# ==========================================
+.vscode/
+.idea/
+
+# ==========================================
+# macOS generated files
+# ==========================================
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ==========================================
+# Temporary files and logs
+# ==========================================
+*.log
+*.tmp
+*.bak
