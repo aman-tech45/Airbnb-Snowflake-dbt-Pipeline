@@ -1,6 +1,20 @@
+# Credentials and sensitive configuration
+profiles.yml
+.user.yml
+.env
+.env.*
+!.env.example
 
+# dbt generated files
 target/
 dbt_packages/
 logs/
-.env
-dbt_internal_packages/
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Mac
+.DS_Store
