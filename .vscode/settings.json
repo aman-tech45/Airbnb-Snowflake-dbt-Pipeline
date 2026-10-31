@@ -1,0 +1,5 @@
+{
+    "dbt.dbtMajorVersion": "v1",
+    "dbt.queryLimit": 50,
+    "dbt.perspectiveTheme": "Pro Dark"
+}
