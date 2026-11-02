@@ -2,8 +2,6 @@
 
 A data engineering project for transforming Airbnb listings, bookings, and host data using Snowflake, dbt, SQL, and AWS S3.
 
-> **Project status:** Repository scaffold. dbt models, snapshots, macros, tests, and ingestion configuration will be added and verified during implementation.
-
 ## Architecture
 
 ```text
@@ -68,9 +66,7 @@ Build downstream models for analysis:
 - `obt` — denormalized table joining relevant bookings, listings, and host attributes
 - Ephemeral models — intermediate transformations compiled into dependent models
 
-Define the grain, measures, and join keys from the actual source schemas before implementing the models.
 
-## Planned Data Engineering Features
 
 ### Incremental models
 Process new or changed data without rebuilding every target table. Implementation should account for late-arriving records, updates, timestamp ties, and unique keys.
@@ -144,33 +140,8 @@ dbt build
 dbt docs generate
 dbt docs serve
 ```
-
-Run layer-specific selectors only after matching them to the project's configured model paths and names.
-
-## Security and Best Practices
-
-- Never commit passwords or populated credential profiles.
-- Use environment variables or an approved secrets manager.
-- Apply least-privilege Snowflake roles; avoid using administrator roles for routine jobs.
-- Validate incremental logic against late-arriving and updated records.
-- Version-control model changes and review tests before deployment.
-- Use only data you are permitted to publish.
-
-## Future Enhancements
-
-- CI/CD for dbt validation and deployment
-- Scheduled orchestration
-- Additional business metrics and dimensional models
-- Power BI or Tableau reporting
-- Data-quality monitoring and alerting
-- Sensitive-field masking and improved incremental strategies
-
 ## References
 
 - dbt documentation: https://docs.getdbt.com/
 - Snowflake documentation: https://docs.snowflake.com/
 - dbt best practices: https://docs.getdbt.com/guides/best-practices
-
-## Project Status
-
-This repository currently provides the project structure and implementation plan. Update this section as each component is implemented and tested.
